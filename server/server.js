@@ -25,6 +25,9 @@ app.use(cors({
     origin: 'http://localhost:4225',
     credentials: true,
 }));
+app.use('/', (req, res) => {
+    res.send('Hello World!');
+})
 app.use('/api', router);
 app.use(validationError)
 
